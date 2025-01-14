@@ -6,4 +6,12 @@ from django.shortcuts import render
 
 def index(request):
     """Function to render the index page"""
-    return HttpResponse("Hello, world!")
+    return render(request, "hello/index.html")
+
+def iygeal(request):
+    """Function to render the iygeal page"""
+    return HttpResponse("Hello Iygeal!")
+
+def greet(request, name):
+    """Function to render the greet page"""
+    return HttpResponse(f"Hello {name.capitalize()}!")
