@@ -8,10 +8,8 @@ def index(request):
     """Function to render the index page"""
     return render(request, "hello/index.html")
 
-def iygeal(request):
-    """Function to render the iygeal page"""
-    return HttpResponse("Hello Iygeal!")
-
 def greet(request, name):
     """Function to render the greet page"""
-    return HttpResponse(f"Hello {name.capitalize()}!")
+    return render(request, "hello/greet.html", {
+        "name": name.capitalize()
+    })
