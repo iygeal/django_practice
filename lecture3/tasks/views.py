@@ -11,3 +11,8 @@ def index(request):
     return render(request, "tasks/index.html", {
         "tasks": tasks
     })
+
+
+def add(request):
+    """Defines the add page"""
+    return render(request, "tasks/add.html")
